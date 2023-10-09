@@ -1,0 +1,171 @@
+@use "./_partials/" as *;
+
+*,
+*::before,
+*::after {
+	border: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	max-width: 1440px;
+	font-family: $ff400;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.content {
+	display: grid;
+	grid-template-columns: 1fr;
+	line-height: 1.5;
+}
+
+.right {
+	padding: 0 2.5em;
+	display: grid;
+	gap: 25px;
+	color: $Charcoal-clr;
+}
+
+.content .right h1,
+.sucess_thanks {
+	font-family: $ff700;
+	font-size: 2rem;
+	// color: $Charcoal-clr;
+	color: $Slate-clr;
+}
+
+ul {
+	list-style-image: url("/src/assets/images/icon-list.svg");
+	display: grid;
+	gap: 0.75em;
+	padding: 0 1.5em;
+}
+
+.left > img {
+	width: 100%;
+}
+
+form {
+	display: grid;
+	gap: 15px;
+}
+
+label {
+	font-size: 1rem;
+	font-family: $ff700;
+	color: $Charcoal-clr;
+	display: grid;
+	font-size: 0.8rem;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 0 0.5em;
+}
+
+#error,
+#empty-email {
+	color: $Tomato-clr;
+	text-align: right;
+	display: none;
+}
+
+input {
+	display: block;
+	padding: 1em 2em;
+	border-radius: 10px;
+	border: 1px solid $Grey-clr;
+	width: 100%;
+	font-family: $ff400;
+}
+
+.error-bg {
+	background-color: $Error-bg-clr;
+	border: 1px solid $Tomato-clr;
+	color: $Tomato-clr;
+	font-size: 1rem;
+}
+
+button {
+	width: 100%;
+	padding: 1.5em 2em;
+	border-radius: 10px;
+	font-family: $ff700;
+	color: $White-clr;
+	background-color: $Slate-clr;
+}
+
+// Successful input of email modal
+
+.text_container {
+	display: grid;
+	gap: 30px;
+	grid-template-columns: 1fr;
+}
+
+.success_content {
+	//
+	padding: 2.5em;
+	height: 100vh;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	// flex-wrap: wrap;
+	color: $Charcoal-clr;
+}
+
+.success_content > button {
+	align-self: flex-end;
+	display: block;
+	margin-top: 2.5em;
+}
+
+.hidden {
+	display: none;
+}
+
+.desktop_img {
+	display: none;
+}
+
+// Media queries
+
+@media screen and (min-width: 48rem) {
+	body {
+		background-color: $Slate-clr;
+	}
+
+	.content {
+		grid-template-columns: repeat(2, 1fr);
+		max-width: 80%;
+		margin: 0 auto;
+		background: $White-clr;
+		padding: 2em;
+		border-radius: 25px;
+	}
+
+	.mobile_img {
+		display: none;
+	}
+
+	.desktop_img {
+		display: block;
+	}
+
+	.left {
+		order: 2;
+	}
+
+	.success_content {
+		height: 25rem;
+		width: 25rem;
+		background: $White-clr;
+		border-radius: 20px;
+		margin: 0 auto;
+	}
+}
+@media screen and (min-width: 60rem) {
+}

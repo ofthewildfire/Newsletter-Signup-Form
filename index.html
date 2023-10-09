@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+
+  <title>Newsletter sign-up form with success message</title>
+</head>
+
+<body>
+
+  <main class='content content_main_form '>
+    <div class="left">
+      <img class="mobile_img" src="./src/assets/images/illustration-sign-up-mobile.svg"
+        alt="illustration-sign-up-mobile">
+      <img class="desktop_img" src="./src/assets/images/illustration-sign-up-desktop.svg"
+        alt="illustration-sign-up-desktop">
+    </div>
+    <div class="right">
+      <h1> Stay updated!</h1>
+      <p> Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul>
+        <li>Product discovery and building what matters</li>
+        <li>Measuring to ensure updates are a success</li>
+        <li>And much more!</li>
+      </ul>
+      <form action="/">
+        <label for="email-add"> Email address
+          <span id="error">Valid email required</span>
+          <span id="empty-email">Oops! Looks like its empty...</span>
+        </label>
+        <input type="text" name="email-add" id="email-add" placeholder="email@company.com">
+        <button>Subscribe to monthly newsletter</button>
+      </form>
+    </div>
+  </main>
+  <!-- Sign-up form start -->
+
+
+
+  <div class="success_content hidden">
+    <section class="text_container">
+      <img src="./src/assets/images/icon-success.svg" alt="Check mark icon">
+      <h2 class="sucess_thanks">Thanks for subscribing!</h2>
+      <p> A confirmation email has been sent to <strong>ash@loremcompany.com</strong>.
+        Please open it and click the button inside to confirm your subscription.</p>
+    </section>
+    <button id="dismiss-msg">Dismiss message</button>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <!-- Sign-up form end -->
+
+  <!-- Success message start -->
+
+
+
+
+
+
+
+  <!-- Success message end -->
+  <script src="./main.js" type="module"></script>
+</body>
+
+</html>
