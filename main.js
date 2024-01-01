@@ -15,7 +15,9 @@ const successModalDisplay = document.querySelector(".success_content")
 const dismissMsgBtn = document.getElementById("dismiss-msg")
 
 dismissMsgBtn.addEventListener("click", () => {
-	location.reload()
+	// location.reload()
+	// mainFormDisplay.style.display = "block"
+	successModalDisplay.classList.add("hidden")
 })
 
 const successContentDisplay = () => {
